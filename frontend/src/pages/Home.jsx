@@ -13,7 +13,7 @@ const Home = () => {
       <ImgSlider />
       <AccouncementBar />
       <AboutSection />
-      <div className='flex justify-center gap-5 px-2 mx-auto'>
+      <div className='flex justify-center gap-5 px-2 mx-auto flex-wrap'>
         <News />
         <Notice />
         <Event />
