@@ -5,7 +5,7 @@ import { Separator}  from '@radix-ui/themes'
 const Footer = () => {
   return (
     <div className='bg-[#e0b54a] text-[#337ab7] p-4  '>
-      <div className='flex  justify-between px-8'>
+      <div className='flex  justify-between flex-wrap px-8'>
         <div>
           <div className='flex flex-col gap-3'>
             <div className='cursor-pointer flex items-center justify-center bg-purple-900  text-white gap-2 p-3 rounded-md font-bold'>
