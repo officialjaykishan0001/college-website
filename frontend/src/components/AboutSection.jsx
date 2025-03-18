@@ -1,6 +1,5 @@
 import React from 'react'
 import { GraduationCap, School, University } from 'lucide-react'
-import { motion } from 'framer-motion'
 const AboutSection = () => {
     return (
         <div>

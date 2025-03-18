@@ -1,5 +1,4 @@
 import React from 'react'
-import { Separator } from '@radix-ui/themes'
 import AnnoucementCard from './AnnoucementCard'
 const News = () => {
     return (
