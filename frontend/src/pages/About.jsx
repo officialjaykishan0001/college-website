@@ -4,22 +4,24 @@ import { Blockquote } from '@radix-ui/themes'
 
 const About = () => {
   return (
-    <div className='w-full flex justify-center p-2'>
-      <div className='border border-black shadow-lg shadow-gray-300 min-h-[50px] min-w-[80vw] max-w-[80vw] p-3' >
-        <div>
-          <h1 className='text-2xl font-bold pl-3'> <Blockquote> About Dhobhi</Blockquote></h1>
-          <div className='flex gap-3 justify-center items-center p-4'>
-            <div className=''> <MapComponent /></div>
-            <div>"DOBHI" is situated at the junction point of Jaunpur,Ghazipur and Varanasi District. It is situated about 34 km from Varanasi, Cantt.History of dobhi is related to lots of bravery activities and sacrifice incidents. Here is situated Purvanchal's most Heritage belt, i.e. MathuraNagri (Karra). This area is in touch of politics, education,socialism, art and culture. In this holy place a school "SRI GANESH RAI HIGH SCHOOL" was established by "Late Thakur Mathura Singh" in year 1939. In 1942 he takes part in freedom fighting. In that moment a British officer destroyed the school by fire and arrested Thakur Mathura Singh and his friends for making disturbances. But after few years when they get releases . They again establishes the school of Intermediate standard by the help and donation of local people in year 1950. Shri Ganesh Rai P. G. College, was established in 1964, it is one of the constituent Colleges of the University of Purvanchal,U. P., India. In the beginning, the College catered basically to the needs of those who were in employment but who had a desire to enhance their educational qualifications and achieve higher standards of learning. Shri Ganesh Rai P.G. College embodied the spirit of social responsibility and cultural awareness reflecting the aspirations of the students.</div>
+    <div className='w-full flex justify-start lg:justify-center  p-2'>
+      <div className='border border-black shadow-lg shadow-gray-300 min-h-[50px] min-w-[80vw] max-w-[100vw] lg:max-w-[80vw] p-3' >
+        <div className='flex flex-wrap sm:flex-nowrap'>
+          <h1 className='text-2xl font-bold sm:pl-3 pl-0'>
+            <Blockquote> About Dhobhi</Blockquote>
+            <div className='py-3'> <MapComponent /></div>
+          </h1>
+          <div className='flex gap-3 justify-center items-center p-4 py-8'>
+            <div className='text-justify'>"DOBHI" is situated at the junction point of Jaunpur,Ghazipur and Varanasi District. It is situated about 34 km from Varanasi, Cantt.History of dobhi is related to lots of bravery activities and sacrifice incidents. Here is situated Purvanchal's most Heritage belt, i.e. MathuraNagri (Karra). This area is in touch of politics, education,socialism, art and culture. In this holy place a school "SRI GANESH RAI HIGH SCHOOL" was established by "Late Thakur Mathura Singh" in year 1939. In 1942 he takes part in freedom fighting. In that moment a British officer destroyed the school by fire and arrested Thakur Mathura Singh and his friends for making disturbances. But after few years when they get releases . They again establishes the school of Intermediate standard by the help and donation of local people in year 1950. Shri Ganesh Rai P. G. College, was established in 1964, it is one of the constituent Colleges of the University of Purvanchal,U. P., India. In the beginning, the College catered basically to the needs of those who were in employment but who had a desire to enhance their educational qualifications and achieve higher standards of learning. Shri Ganesh Rai P.G. College embodied the spirit of social responsibility and cultural awareness reflecting the aspirations of the students.</div>
           </div>
         </div>
-        <div className='flex '>
-          <h1 className='text-2xl font-bold pl-3 '>
+        <div className='flex flex-wrap sm:flex-nowrap'>
+          <h1 className='text-2xl font-bold sm:pl-3 pl-0 '>
             <Blockquote > About College</Blockquote>
-            <img className='min-w-[420px] py-3 rounded-md' src="http://www.sgrpgcollege.in/images/CollegeFront.jpg" alt="college-front-pic" />
+            <img className='min-w-[220px] sm:min-w-[420px] py-3 rounded-md' src="http://www.sgrpgcollege.in/images/CollegeFront.jpg" alt="college-front-pic" />
           </h1>
-          <div className='flex justify-center items-center p-4 py-8'>
-            <div>According to the change in Higher Education of new generation and their demand in Science, Arts, Education , Commerce and Agriculture Sciences S.G.R.P.G. College has taken affiliations time to time.
+          <div className='flex justify-center items-center p-4 py-9'>
+            <div className='text-justify'>According to the change in Higher Education of new generation and their demand in Science, Arts, Education , Commerce and Agriculture Sciences S.G.R.P.G. College has taken affiliations time to time.
 
               SRI GANESH RAI TRUST has taken affiliation (approval) of running B.Sc. Class in Math like Physics, Math, Chemistry at first in 1964. Later on in year 1969 has taken affiliation of B.Sc. class in Biology like Botany,Zoology, Military Science and some subjects in B.A. like Hindi, English, Sanskrit, History, Geography, Economics, Political Science, Education, Sociology, psychology and Military Science
 

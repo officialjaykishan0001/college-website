@@ -11,15 +11,15 @@ const customIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
-const position = [28.6139, 77.2090]; 
+const position = [25.633308965287924, 82.99061549400415]; 
 
 const MapComponent = () => {
   return (
-    <div style={{ width: "400px", height: "250px", borderRadius: "10px", overflow: "hidden", boxShadow: "0 4px 6px rgba(0,0,0,0.1)" }}>
+    <div  className="w-[335px] sm:w-[400px] h-[250px] overflow-hidden rounded-lg shadow-md">
       <MapContainer center={position} zoom={15} style={{ height: "100%", width: "100%" }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <Marker position={position} icon={customIcon}>
-          <Popup>Our College Location</Popup>
+          <Popup>SGR PG College</Popup>
         </Marker>
       </MapContainer>
     </div>
