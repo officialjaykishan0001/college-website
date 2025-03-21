@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { ChevronDown, Menu, X } from 'lucide-react'
 import { Link } from "react-router-dom";
 
-
 const Navbar = () => {
   const [isMenuClicked, setIsMenuClicked] = useState(false)
   const handleMenuClick = () => {
@@ -33,9 +32,12 @@ const Navbar = () => {
         <nav className={`sm:flex items-center xl:gap-6 lg:gap-3 md:gap-[15px] sm:gap-[15px] bg-purple-900 text-white p-3 md:p-[6px] sm:p-[5px] font-medium xl:text-xl lg:text-[12px] md:text-[8px] sm:text-[6px]  ${isMenuClicked ? 'flex' : 'hidden'} flex-wrap text-[12px] gap-3`}>
           <span className='cursor-pointer flex  items-center justify-center'>  <Link to="/">Home</Link> </span>
           <span className='cursor-pointer flex  items-center justify-center'> <Link to="/about">About Us</Link> </span>
-          <span className='cursor-pointer flex  items-center justify-center'> <Link to="/university">University</Link> </span>
-          <span className='cursor-pointer flex  items-center justify-center'>Academics <ChevronDown className='pt-1' /></span>
-          <span className='cursor-pointer flex  items-center justify-center'>Faculties </span>
+          <span className='cursor-pointer flex  items-center justify-center'>
+            <Link to="/about/principal-message">
+              Principal Message
+            </Link>
+          </span>
+          <span className='cursor-pointer flex  items-center justify-center'> <Link to="/faculties">Faculties</Link>  </span>
           <span className='cursor-pointer flex  items-center justify-center'>Admission <ChevronDown className='pt-1' /></span>
           <span className='cursor-pointer flex  items-center justify-center'>Student Support </span>
           <span className='cursor-pointer flex  items-center justify-center'>Infrastructure </span>

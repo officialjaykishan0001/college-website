@@ -37,6 +37,10 @@
     {
       "src": "digitalind.png",
       "type":"image/png"
+    },
+    {
+      "src": "principalPic",
+      "type": "image/png"
     }
   ],
   "start_url": ".",

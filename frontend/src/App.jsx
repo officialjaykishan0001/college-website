@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import University from "./pages/Univesity";
 import Layout from "./components/Layout";
 import "./App.css";
+import PrincipalMessage from "./pages/PrincipalMessage";
+import Faculties from "./pages/Faculties";
 
 // Define Routes with Layout
 const appRouter = createBrowserRouter([
@@ -13,7 +14,8 @@ const appRouter = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
-      { path: "/university", element: <University /> },
+      { path: "/about/principal-message", element: <PrincipalMessage /> },
+      { path: "/faculties", element: <Faculties/>}
     ],
   },
 ]);
