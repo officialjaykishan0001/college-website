@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuClicked, setIsMenuClicked] = useState(false)
+  const [clickedNavBtn, setClickedNavBtn] = useState('home')
   const handleMenuClick = () => {
     setIsMenuClicked(!isMenuClicked)
 
@@ -30,15 +31,21 @@ const Navbar = () => {
           </div>
         </div>
         <nav className={`sm:flex items-center xl:gap-6 lg:gap-3 md:gap-[15px] sm:gap-[15px] bg-purple-900 text-white p-3 md:p-[6px] sm:p-[5px] font-medium xl:text-xl lg:text-[12px] md:text-[8px] sm:text-[6px]  ${isMenuClicked ? 'flex' : 'hidden'} flex-wrap text-[12px] gap-3`}>
-          <span className='cursor-pointer flex  items-center justify-center'>  <Link to="/">Home</Link> </span>
-          <span className='cursor-pointer flex  items-center justify-center'> <Link to="/about">About Us</Link> </span>
-          <span className='cursor-pointer flex  items-center justify-center'>
-            <Link to="/about/principal-message">
-              Principal Message
-            </Link>
+          <span onClick={() => setClickedNavBtn('home')} className='cursor-pointer flex  items-center justify-center'>
+            <Link to="/">Home</Link>
           </span>
-          <span className='cursor-pointer flex  items-center justify-center'> <Link to="/faculties">Faculties</Link>  </span>
-          <span className='cursor-pointer flex  items-center justify-center'>Admission <ChevronDown className='pt-1' /></span>
+          <span onClick={() => setClickedNavBtn('about')} className='cursor-pointer flex  items-center justify-center'>
+            <Link to="/about">About Us</Link>
+          </span>
+          <span onClick={() => setClickedNavBtn('principal-message')} className='cursor-pointer flex  items-center justify-center'>
+            <Link to="/about/principal-message">Principal Message</Link>
+          </span>
+          <span onClick={() => setClickedNavBtn('courses')} className={`cursor-pointer flex  items-center justify-center `}>
+            <Link to="/courses">Courses</Link>
+          </span>
+          <span onClick={() => setClickedNavBtn('faculties')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'faculties' ? 'text-pink-600 shadow-lg' : ''}`}>
+            <Link to="/faculties">Faculties</Link>
+          </span>
           <span className='cursor-pointer flex  items-center justify-center'>Student Support </span>
           <span className='cursor-pointer flex  items-center justify-center'>Infrastructure </span>
           <span className='cursor-pointer flex  items-center justify-center'>Library </span>

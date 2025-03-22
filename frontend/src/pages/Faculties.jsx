@@ -3,13 +3,13 @@ const Faculties = () => {
     return (
         <div>
             <div className='w-full p-4 bg-[#f2f2f2]'>
-                <h1 className='flex justify-center text-4xl font-bold'>Faculties</h1>
+                <h1 className='flex justify-center text-4xl font-semibold'>Faculties</h1>
             </div>
-            <div className='max-w-[80%] mx-auto pb-2 '>
+            <div className='max-w-[95%] sm:max-w-[80%] mx-auto pb-2 '>
                 <div className='border border-gray-50 shadow-2xl'>
                     <div>
                         <div className='bg-[#13263a] text-white text-2xl flex justify-center'><h1>Science Faculty</h1></div>
-                        <div className='pl-16 pb-5'>
+                        <div className='pl-[15px] sm:pl-16 pb-5'>
                             <div>
                                 <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Computer Department</h1></div>
                                 <div className='px-4'>
@@ -74,7 +74,7 @@ const Faculties = () => {
                     </div>
                     <div>
                         <div className='bg-[#13263a] text-white text-2xl flex justify-center'><h1>Arts Faculty</h1></div>
-                        <div className='pl-16 pb-5'>
+                        <div className='pl-[15px] sm:pl-16 pb-5'>
                             <div>
                                 <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Political Science Department</h1></div>
                                 <div className='px-4'>
@@ -98,12 +98,162 @@ const Faculties = () => {
                                     </ol>
                                 </div>
                             </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Hindi Department</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Km. Shradha Yadav - (Assistant Professor) -(8318359611)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Geography Department</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Dr. Ravindra Kumar Pandey - (Professor and H.O.D.)-(8957720325)</li>
+                                        <li>Sri Ravi Kumar - (Assistant Professor) -(9451904564)</li>
+                                        <li>Sri Ranjit Kumar Patel - (Assistant Professor) -(6388791007)</li>
+                                        <li>Dr. Rama Shanker - (Assistant Professor) -(9651102246)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Sanskrit Department</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Dr. Pratap Kumar Mishra - (Professor and H.O.D.)-(9415697016)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Economics Department</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Dr. Rama Shanker Singh - (Professor and H.O.D.)-(9415653699)</li>
+                                        <li>Dr. Heera Lal Singh - (Assistant Professor)-(9451710899)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Sociology Department</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Dr.(Smt.) Sarita Singh - (Professor and H.O.D.)-(9450240627)</li>
+                                        <li>Smt. Raksha Singh - (Assistant Professor) -(7380335678)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>English Department</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>...</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>History Department</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Dr. Praveen Kumar Tripathi - (Assistant Professor)-(9415803728)</li>
+                                        <li>Dr. Vinod Singh - (Assistant Professor)-(8004488488)</li>
+                                        <li>Dr. Dileep Kumar Mishra - (Assistant Professor)-(9454818677)</li>
+                                        <li>Dr. Satish Chandra Singh - (Assistant Professor)-(9838462627)</li>
+                                        <li>Dr. Anand Kumar Singh - (Assistant Professor)-(9838323963)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Psychology Department</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Km. Shambhawi Tripathi -(Assistant Professor)-(7985441572)</li>
+                                        <li>Km. Sheema Chaudhury - (Assistant Professor) -(9140110408)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Education Department</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Dr. Rajendra Prasad - (Professor and H.O.D.)-(9415868871)</li>
+                                        <li>Dr. Rajendra Kumar Jaisawal-(Assistant Professor)-(9453370907)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Physical Education Department</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Sri Rahul Patel - (Assistant Professor) -(7356117275)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Home Science Department</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Dr.(Smt.) Saroj Singh -(Assistant Professor and H.O.D.)-(9415991379)</li>
+                                        <li>Dr.(Smt.) Sweta Rai - (Assistant Professor)</li>
+                                    </ol>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
-
+                    <div>
+                        <div className='bg-[#13263a] text-white text-2xl flex justify-center'><h1>B.Ed. Faculty</h1></div>
+                        <div className='pl-[15px]  sm:pl-16 pb-5'>
+                            <div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Dr.(Smt.) Kumud Tripathi - (Professor and H.O.D.)-(7376726015)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className='bg-[#13263a] text-white text-2xl flex justify-center'><h1>Commerce Faculty</h1></div>
+                        <div className='pl-[15px] sm:pl-16 pb-5'>
+                            <div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li> Dr. Alok Singh - (Professor and H.O.D.)-(9839354613)</li>
+                                        <li>Dr. Aman Kumar - (Assistant Professor)-(9616723038)</li>
+                                        <li>Sri Nitesh Kumar Yadav - (Assistant Professor) -(9696352038)</li>
+                                        <li>Sri Kamlesh Kumar - (Assistant Professor) -(7505029829)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div>
+                                <div><h1 className='text-2xl font-bold py-1 pt-4 text-purple-900'>Office Management</h1></div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                        <li>Dr. Sunil Kumar Singh - (Assistant Professor)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className='bg-[#13263a] text-white text-2xl flex justify-center'><h1>Agriculture Faculty</h1></div>
+                        <div className='pl-[15px] sm:pl-16 pb-5'>
+                            <div>
+                                <div className='px-4'>
+                                    <ol className='list-decimal'>
+                                       <li>Dr. Rajesh Kumar Singh - (Assistant Professor & H.O.D.)-(9451922892)</li>
+                                       <li>Dr. Nihal Khan -(Assistant Professor)-(9450031738)</li>
+                                       <li>Dr. Om Prakash Singh-(Assistant Professor)-(9450356974)</li>
+                                       <li>Dr. Pramod Kumar Singh -(Assistant Professor)-(9984761426)</li>
+                                       <li>Dr. Rakesh Singh-(Assistant Professor)-(9454155518)</li>
+                                       <li>Dr. Ajay Kumar Yadav-(Assistant Professor)-(9415699975)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
     )
