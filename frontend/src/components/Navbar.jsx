@@ -52,10 +52,9 @@ const Navbar = () => {
           <span onClick={() => setClickedNavBtn('sports')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'sports' ? 'text-pink-600 shadow-lg' : ''}`}>
             <Link to="/sports">Sports</Link>
           </span>
-          <span className='cursor-pointer flex  items-center justify-center'>Events </span>
-          <span className='cursor-pointer flex  items-center justify-center'>Gallery </span>
-          <span className='cursor-pointer flex  items-center justify-center'>Alumni </span>
-          <span className='cursor-pointer flex  items-center justify-center'>IQAC </span>
+          <span onClick={() => setClickedNavBtn('gallery')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'gallery' ? 'text-pink-600 shadow-lg' : ''}`}>
+            <Link to="/gallery">Gallery</Link>
+            </span>
           <span className='cursor-pointer flex  items-center justify-center'>Contact Us </span>
         </nav>
       </header>
