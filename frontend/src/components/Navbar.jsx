@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ChevronDown, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -31,24 +31,27 @@ const Navbar = () => {
           </div>
         </div>
         <nav className={`sm:flex items-center xl:gap-6 lg:gap-3 md:gap-[15px] sm:gap-[15px] bg-purple-900 text-white p-3 md:p-[6px] sm:p-[5px] font-medium xl:text-xl lg:text-[12px] md:text-[8px] sm:text-[6px]  ${isMenuClicked ? 'flex' : 'hidden'} flex-wrap text-[12px] gap-3`}>
-          <span onClick={() => setClickedNavBtn('home')} className='cursor-pointer flex  items-center justify-center'>
+          <span onClick={() => setClickedNavBtn('home')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'home' ? 'text-pink-600 shadow-lg' : ''}`}>
             <Link to="/">Home</Link>
           </span>
-          <span onClick={() => setClickedNavBtn('about')} className='cursor-pointer flex  items-center justify-center'>
+          <span onClick={() => setClickedNavBtn('about')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'about' ? 'text-pink-600 shadow-lg' : ''}`}>
             <Link to="/about">About Us</Link>
           </span>
-          <span onClick={() => setClickedNavBtn('principal-message')} className='cursor-pointer flex  items-center justify-center'>
+          <span onClick={() => setClickedNavBtn('principal-message')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'principal-message' ? 'text-pink-600 shadow-lg' : ''}`}>
             <Link to="/about/principal-message">Principal Message</Link>
           </span>
-          <span onClick={() => setClickedNavBtn('courses')} className={`cursor-pointer flex  items-center justify-center `}>
+          <span onClick={() => setClickedNavBtn('courses')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'courses' ? 'text-pink-600 shadow-lg' : ''}`}>
             <Link to="/courses">Courses</Link>
           </span>
           <span onClick={() => setClickedNavBtn('faculties')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'faculties' ? 'text-pink-600 shadow-lg' : ''}`}>
             <Link to="/faculties">Faculties</Link>
           </span>
-          <span className='cursor-pointer flex  items-center justify-center'>Student Support </span>
-          <span className='cursor-pointer flex  items-center justify-center'>Infrastructure </span>
-          <span className='cursor-pointer flex  items-center justify-center'>Library </span>
+          <span onClick={() => setClickedNavBtn('infrastructure')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'infrastructure' ? 'text-pink-600 shadow-lg' : ''}`}>
+            <Link to="/infrastructure">Infrastructure</Link>
+          </span>
+          <span onClick={() => setClickedNavBtn('sports')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'sports' ? 'text-pink-600 shadow-lg' : ''}`}>
+            <Link to="/sports">Sports</Link>
+          </span>
           <span className='cursor-pointer flex  items-center justify-center'>Events </span>
           <span className='cursor-pointer flex  items-center justify-center'>Gallery </span>
           <span className='cursor-pointer flex  items-center justify-center'>Alumni </span>

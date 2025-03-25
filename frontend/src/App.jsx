@@ -6,6 +6,8 @@ import "./App.css";
 import PrincipalMessage from "./pages/PrincipalMessage";
 import Faculties from "./pages/Faculties";
 import Courses from "./pages/Courses";
+import Infrastructure from "./pages/Infrastructure";
+import Sports from "./pages/Sports";
 
 // Define Routes with Layout
 const appRouter = createBrowserRouter([
@@ -17,7 +19,9 @@ const appRouter = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/about/principal-message", element: <PrincipalMessage /> },
       { path: "/faculties", element: <Faculties /> },
-      { path: "/courses", element: <Courses /> }
+      { path: "/courses", element: <Courses /> },
+      { path: "/infrastructure", element: <Infrastructure/>},
+      { path: "sports", element: <Sports/>}
     ],
   },
 ]);
