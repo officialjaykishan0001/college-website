@@ -14,7 +14,7 @@ const Gallery = () => {
             <div className='w-full p-4 bg-[#f2f2f2]'>
                 <h1 className='flex justify-center text-4xl font-semibold '>Gallery</h1>
             </div>
-            <div className="max-w-6xl mx-auto border border-black shadow-lg shadow-gray-300 p-4 bg-white">
+            <div className="max-w-6xl mx-auto mt-5 border border-gray-300 rounded-md shadow-lg shadow-gray-300 p-4 bg-white">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {images.map((src, index) => (
                         <img

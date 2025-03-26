@@ -1,6 +1,7 @@
 import React from 'react'
 import { Earth, MapPin, PhoneCall, ThumbsUp } from 'lucide-react'
 import { Separator}  from '@radix-ui/themes'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -24,7 +25,7 @@ const Footer = () => {
           <div className='text-white flex flex-col gap-4 py-4'>
             <div className='flex gap-2 cursor-pointer'>
               <MapPin />
-              <span>RMJJ+7PR, Shahganj Road, Siddikpur, Uttar Pradesh 222003</span>
+              <span>Dobhi, Jaunpur, Uttar Pradesh.</span>
             </div>
             <div className='flex gap-2 cursor-pointer'>
               <PhoneCall />
@@ -39,7 +40,7 @@ const Footer = () => {
         <div>
           <span className='text-purple-900 text-2xl font-medium'>Quick Links</span>
           <div className='text-white flex flex-col gap-4 py-4'>
-            <span className='cursor-pointer'>Photo Gallery</span>
+            <span className='cursor-pointer'> <Link to="/gallery">Photo Gallery</Link></span>
             <span className='cursor-pointer'>Downloads</span>
           </div>
         </div>

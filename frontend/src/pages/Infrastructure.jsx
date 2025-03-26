@@ -6,7 +6,7 @@ const Infrastructure = () => {
     return (
         <div>
             <div className='w-full flex justify-start lg:justify-center  p-2'>
-                <div className='border border-black shadow-lg shadow-gray-300 min-h-[50px] min-w-[80vw] max-w-[100vw] lg:max-w-[80vw] p-3' >
+                <div className='border border-gray-300 rounded-md shadow-lg shadow-gray-300 min-h-[50px] min-w-[80vw] max-w-[100vw] lg:max-w-[80vw] p-3' >
                     <div className='flex flex-wrap sm:flex-nowrap'>
                         <h1 className='text-2xl font-bold sm:pl-3 pl-0'>
                             <Blockquote>HOSTEL</Blockquote>

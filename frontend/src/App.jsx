@@ -9,6 +9,8 @@ import Courses from "./pages/Courses";
 import Infrastructure from "./pages/Infrastructure";
 import Sports from "./pages/Sports";
 import Gallery from "./pages/Gallery";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
 
 // Define Routes with Layout
 const appRouter = createBrowserRouter([
@@ -21,9 +23,11 @@ const appRouter = createBrowserRouter([
       { path: "/about/principal-message", element: <PrincipalMessage /> },
       { path: "/faculties", element: <Faculties /> },
       { path: "/courses", element: <Courses /> },
-      { path: "/infrastructure", element: <Infrastructure/>},
-      { path: "/sports", element: <Sports/>},
-      { path: "/gallery", element: <Gallery/>}
+      { path: "/infrastructure", element: <Infrastructure /> },
+      { path: "/sports", element: <Sports /> },
+      { path: "/gallery", element: <Gallery /> },
+      { path: "/contact", element: <Contact /> },
+      { path: "/login", element: <Login /> }
     ],
   },
 ]);

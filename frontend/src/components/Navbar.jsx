@@ -54,8 +54,13 @@ const Navbar = () => {
           </span>
           <span onClick={() => setClickedNavBtn('gallery')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'gallery' ? 'text-pink-600 shadow-lg' : ''}`}>
             <Link to="/gallery">Gallery</Link>
-            </span>
-          <span className='cursor-pointer flex  items-center justify-center'>Contact Us </span>
+          </span>
+          <span onClick={() => setClickedNavBtn('contact')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'contact' ? 'text-pink-600 shadow-lg' : ''}`}>
+            <Link to="/contact">Contact Us</Link>
+          </span>
+          <span onClick={() => setClickedNavBtn('login')} className={`cursor-pointer flex  items-center justify-center ${clickedNavBtn === 'login' ? 'text-pink-600 shadow-lg' : ''}`}>
+            <Link to="/login">Login</Link>
+          </span>
         </nav>
       </header>
     </div>
