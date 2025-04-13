@@ -1,0 +1,31 @@
+# POST http://localhost:3000/api/v1/admin/login 
+# Content-Type: application/json
+
+# {
+#     "name": "Super Admin",
+#     "email": "superadmin@example.com",
+#     "password": "superAdminSGR",
+#     "role": "superadmin"
+# }
+
+# GET http://localhost:3000/api/v1/admin/logout 
+
+POST http://localhost:3000/api/v1/admin/register/facultyadmin 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdlNTZiYmI4YWRkODQxMDVmNTEyYTRlIiwiaWF0IjoxNzQ0NTMyMDIwLCJleHAiOjE3NDQ2MTg0MjB9.vvpuzVtD3SCikIZzsvN9cst-R5CU2IEjBRAZSFMvZEw
+
+{
+    "name": "Faculty Admin",
+    "email": "facultyadmin@example.com",
+    "password": "facultyAdminSGR"
+}
+
+# POST http://localhost:3000/api/v1/admin/login 
+# Content-Type: application/json
+
+# {
+#     "name": "FAculty Admin",
+#     "email": "facultyadmin@example.com",
+#     "password": "facultyAdminSGR",
+#     "role": "facultyadmin"
+# }
