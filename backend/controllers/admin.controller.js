@@ -64,7 +64,6 @@ exports.login = async (req, res) => {
     }
 }
 
-
 exports.logout = async (req, res) => {
     try {
         return res.status(200).cookie('token', "", { maxAge: '0' }).json({
@@ -79,7 +78,6 @@ exports.logout = async (req, res) => {
         })
     }
 }
-
 
 exports.registerFacultyAdmin = async (req, res) => {
     try {
@@ -119,5 +117,79 @@ exports.registerFacultyAdmin = async (req, res) => {
             success: false,
             message: "Internal Server error"
         })
+    }
+}
+
+exports.getFacultyAdmins = async (req, res) => {
+    try {
+        const admins = await Admin.find({ role: 'facultyadmin' });
+
+        if (!admins) {
+            return res.status(404).json({
+                success: false,
+                message: "Faculty admins not found"
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            admins
+        })
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+exports.updateProfile = async (req, res) => {
+    try {
+        const { name } = req.body;
+        let admin = await Admin.findById(req.id);
+
+        if (!admin) {
+            return res.status(400).json({
+                success: false,
+                message: "Admin not found"
+            })
+        }
+
+        if (name) admin.name = name;
+
+        await admin.save();
+
+        admin = {
+            _id: admin._id,
+            name: admin.name,
+            email: admin.email,
+            role: admin.role
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: 'Profile updated successfully',
+            admin
+        })
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+exports.deleteAdmin = async (req, res) => {
+    try {
+        const deletedAdmin = await Admin.findByIdAndDelete(req.params.id);
+
+        if (!deletedAdmin) {
+            return res.status(400).json({
+                success: false,
+                message: "Admin not found"
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: "Admin deleted successfully",
+            deletedAdmin
+        })
+    } catch (err) {
+        console.log(err)
     }
 }

@@ -10,22 +10,37 @@
 
 # GET http://localhost:3000/api/v1/admin/logout 
 
-POST http://localhost:3000/api/v1/admin/register/facultyadmin 
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdlNTZiYmI4YWRkODQxMDVmNTEyYTRlIiwiaWF0IjoxNzQ0NTMyMDIwLCJleHAiOjE3NDQ2MTg0MjB9.vvpuzVtD3SCikIZzsvN9cst-R5CU2IEjBRAZSFMvZEw
+# POST http://localhost:3000/api/v1/admin/register/facultyadmin 
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdlNTZiYmI4YWRkODQxMDVmNTEyYTRlIiwiaWF0IjoxNzQ0NTMyMDIwLCJleHAiOjE3NDQ2MTg0MjB9.vvpuzVtD3SCikIZzsvN9cst-R5CU2IEjBRAZSFMvZEw
 
-{
-    "name": "Faculty Admin",
-    "email": "facultyadmin@example.com",
-    "password": "facultyAdminSGR"
-}
+# {
+#     "name": "Faculty Admin 2",
+#     "email": "facultyadmin2@example.com",
+#     "password": "facultyAdminSGR"
+# }
 
 # POST http://localhost:3000/api/v1/admin/login 
 # Content-Type: application/json
 
 # {
-#     "name": "FAculty Admin",
-#     "email": "facultyadmin@example.com",
+#     "name": "FAculty Admin 2",
+#     "email": "facultyadmin2@example.com",
 #     "password": "facultyAdminSGR",
 #     "role": "facultyadmin"
 # }
+
+# GET http://localhost:3000/api/v1/admin/getfacultyadmins
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjdjNjNmMWU1MzA1MGI1YWI1ZWM3IiwiaWF0IjoxNzQ0NjQxODc5LCJleHAiOjE3NDQ3MjgyNzl9.A_Dg9QTM615lcjBEX_Ti_FeL_hLBk06hG8inP4DDVNA
+
+
+# POST  http://localhost:3000/api/v1/admin/profile/update 
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjdjNjNmMWU1MzA1MGI1YWI1ZWM3IiwiaWF0IjoxNzQ0NjQxODc5LCJleHAiOjE3NDQ3MjgyNzl9.A_Dg9QTM615lcjBEX_Ti_FeL_hLBk06hG8inP4DDVNA
+
+# {
+#     "name": "Faculty Admin 2"
+# }
+
+DELETE  http://localhost:3000/api/v1/admin/delete/67fb7c63f1e53050b5ab5ec7 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjdjNjNmMWU1MzA1MGI1YWI1ZWM3IiwiaWF0IjoxNzQ0NjQxODc5LCJleHAiOjE3NDQ3MjgyNzl9.A_Dg9QTM615lcjBEX_Ti_FeL_hLBk06hG8inP4DDVNA
