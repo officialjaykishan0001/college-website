@@ -24,8 +24,8 @@
 # Content-Type: application/json
 
 # {
-#     "name": "FAculty Admin 2",
-#     "email": "facultyadmin2@example.com",
+#     "name": "FAculty Admin ",
+#     "email": "facultyadmin@example.com",
 #     "password": "facultyAdminSGR",
 #     "role": "facultyadmin"
 # }
@@ -42,5 +42,34 @@
 #     "name": "Faculty Admin 2"
 # }
 
-DELETE  http://localhost:3000/api/v1/admin/delete/67fb7c63f1e53050b5ab5ec7 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjdjNjNmMWU1MzA1MGI1YWI1ZWM3IiwiaWF0IjoxNzQ0NjQxODc5LCJleHAiOjE3NDQ3MjgyNzl9.A_Dg9QTM615lcjBEX_Ti_FeL_hLBk06hG8inP4DDVNA
+# DELETE  http://localhost:3000/api/v1/admin/delete/67fb7c63f1e53050b5ab5ec7 
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjdjNjNmMWU1MzA1MGI1YWI1ZWM3IiwiaWF0IjoxNzQ0NjQxODc5LCJleHAiOjE3NDQ3MjgyNzl9.A_Dg9QTM615lcjBEX_Ti_FeL_hLBk06hG8inP4DDVNA
+
+# post http://localhost:3000/api/v1/notice/create
+# Content-Type: application/json
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8
+
+# {
+#     "title": "test",
+#     "description": "test notice",
+#     "category": "General"
+# }
+
+# get http://localhost:3000/api/v1/notice/getAllNotices
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8
+
+
+# get http://localhost:3000/api/v1/notice/get/6814dcc66c5cd4178d887988
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8
+
+# POST http://localhost:3000/api/v1/notice/update/6814dcc66c5cd4178d887988
+# Content-Type: application/json
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8
+
+# {
+#     "title": "updated test",
+#     "description": "test notce updated",
+#     "category": "Exam"
+# }
+delete http://localhost:3000/api/v1/notice/delete/6814dcc66c5cd4178d887988
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8

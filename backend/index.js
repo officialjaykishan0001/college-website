@@ -7,7 +7,7 @@ dotenv.config();
 
 
 const adminRoute = require('./routes/admin.route')
-
+const noticeRoute = require('./routes/notice.route')
 
 const app = express()
 const port = 3000
@@ -23,6 +23,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use('/api/v1/admin', adminRoute)
+app.use('/api/v1/notice', noticeRoute)
 
 app.listen(port, () => {
   connectDB();
