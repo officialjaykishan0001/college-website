@@ -71,5 +71,68 @@
 #     "description": "test notce updated",
 #     "category": "Exam"
 # }
-delete http://localhost:3000/api/v1/notice/delete/6814dcc66c5cd4178d887988
-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8
+# delete http://localhost:3000/api/v1/notice/delete/6814dcc66c5cd4178d887988
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8 
+
+
+
+
+# POST http://localhost:3000/api/v1/event/create
+# Content-Type: multipart/form-data; boundary=boundary123
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8 
+
+# --boundary123
+# Content-Disposition: form-data; name="title"
+
+# Important Notice
+# --boundary123
+# Content-Disposition: form-data; name="description"
+
+# This is the description of the notice.
+# --boundary123
+# Content-Disposition: form-data; name="eventDate"
+
+# 11/02/2025
+# --boundary123
+# Content-Disposition: form-data; name="location"
+
+# Hyderabad
+# --boundary123
+# Content-Disposition: form-data; name="image"; filename="notice.png"
+# Content-Type: image/png
+
+# < ./images/1.png
+# --boundary123--
+
+# GET http://localhost:3000/api/v1/event/getAllEvents
+# GET  http://localhost:3000/api/v1/event/get/6815dd20926bd200b493e41f
+
+# POST  http://localhost:3000/api/v1/event/update/6815dd20926bd200b493e41f 
+# Content-Type: multipart/form-data; boundary=boundary123
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8 
+
+# --boundary123
+# Content-Disposition: form-data; name="title"
+
+# Important Event
+# --boundary123
+# Content-Disposition: form-data; name="description"
+
+# This is the description of the Event.
+# --boundary123
+# Content-Disposition: form-data; name="eventDate"
+
+# 11/02/2025
+# --boundary123
+# Content-Disposition: form-data; name="location"
+
+# Pune
+# --boundary123
+# Content-Disposition: form-data; name="image"; filename="notice.png"
+# Content-Type: image/png
+
+# < ./images/2.png
+# --boundary123--
+
+delete  http://localhost:3000/api/v1/event/delete/6815dd20926bd200b493e41f 
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8 
