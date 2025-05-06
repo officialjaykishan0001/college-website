@@ -181,6 +181,23 @@
 # < ./images/1.png
 # --boundary123--
 
-Delete   http://localhost:3000/api/v1/news/delete/6815eadd68156ca3440ed15b
-Content-Type: multipart/form-data; boundary=boundary123
-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2NDk5NTQzLCJleHAiOjE3NDY1ODU5NDN9.Yycxi3rngTR9JcLC02J3G1AcawBUqzFvZiEZN0PAslY 
+# Delete   http://localhost:3000/api/v1/news/delete/6815eadd68156ca3440ed15b
+# Content-Type: multipart/form-data; boundary=boundary123
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2NDk5NTQzLCJleHAiOjE3NDY1ODU5NDN9.Yycxi3rngTR9JcLC02J3G1AcawBUqzFvZiEZN0PAslY 
+ 
+# Post   http://localhost:3000/api/v1/gallery/upload
+# Content-Type: multipart/form-data; boundary=boundary123
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2NDk5NTQzLCJleHAiOjE3NDY1ODU5NDN9.Yycxi3rngTR9JcLC02J3G1AcawBUqzFvZiEZN0PAslY 
+
+# --boundary123
+# Content-Disposition: form-data; name="caption"
+
+# Test caption 2
+# --boundary123
+# Content-Disposition: form-data; name="image"; filename="image1.png"
+# Content-Type: image/png
+
+# < ./images/2.png
+# --boundary123--
+
+GET http://localhost:3000/api/v1/gallery/get
