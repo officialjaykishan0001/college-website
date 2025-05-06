@@ -218,5 +218,227 @@ Deletes a notice by ID.
 
 ---
 
+## 📅 Event Route
+
+### Base URL: `/api/v1/event`
+
+
+### 1. Create Event
+
+**Endpoint:** `POST /api/event/create`
+**Description:** Create a new event (Admin only)
+**Authentication:** Required (Bearer Token)
+**Content-Type:** `multipart/form-data`
+
+#### Request Body:
+
+| Field       | Type   | Required | Description       |
+| ----------- | ------ | -------- | ----------------- |
+| title       | String | Yes      | Event title       |
+| description | String | Yes      | Event details     |
+| eventDate   | String | Yes      | Date of the event |
+| location    | String | Yes      | Venue             |
+| eventImage  | File   | Yes      | Event image       |
+
+#### Response:
+
+```json
+{
+  "success": true,
+  "message": "Event created successfully"
+}
+```
+
+---
+
+### 2. Get All Events
+
+**Endpoint:** `GET /api/event/all`
+**Description:** Retrieve all events
+**Authentication:** Not required
+
+#### Response:
+
+```json
+{
+  "success": true,
+  "allEvents": [ ... ]
+}
+```
+
+---
+
+### 3. Get Single Event
+
+**Endpoint:** `GET /api/event/:id`
+**Description:** Retrieve details of a specific event
+**Authentication:** Not required
+
+#### Response:
+
+```json
+{
+  "success": true,
+  "event": { ... }
+}
+```
+
+---
+
+### 4. Update Event
+
+**Endpoint:** `PUT /api/event/update/:id`
+**Description:** Update an existing event (Admin only)
+**Authentication:** Required
+**Content-Type:** `multipart/form-data`
+
+#### Request Body (any of the below):
+
+| Field       | Type   | Description      |
+| ----------- | ------ | ---------------- |
+| title       | String | Updated title    |
+| description | String | Updated details  |
+| eventDate   | String | Updated date     |
+| location    | String | Updated location |
+| eventImage  | File   | New event image  |
+
+#### Response:
+
+```json
+{
+  "success": true,
+  "message": "Event updated successfully",
+  "event": { ... }
+}
+```
+
+---
+
+### 5. Delete Event
+
+**Endpoint:** `DELETE /api/event/delete/:id`
+**Description:** Delete a specific event (Admin only)
+**Authentication:** Required
+
+#### Response:
+
+```json
+{
+  "success": true,
+  "message": "Event deleted successfully",
+  "deletedEvent": { ... }
+}
+```
+
+---
+
+## 📰 News Management API
+
+### Base URL:  `/api/v1/news`
+
+
+### 1. Create News
+
+**Endpoint:** `POST /api/news/create`
+**Description:** Create a news item (Admin only)
+**Authentication:** Required
+**Content-Type:** `multipart/form-data`
+
+#### Request Body:
+
+| Field     | Type   | Required | Description   |
+| --------- | ------ | -------- | ------------- |
+| headline  | String | Yes      | News headline |
+| content   | String | Yes      | News content  |
+| newsImage | File   | Yes      | News image    |
+
+#### Response:
+
+```json
+{
+  "success": true,
+  "message": "News created successfully"
+}
+```
+
+---
+
+### 2. Get All News
+
+**Endpoint:** `GET /api/news/all`
+**Description:** Retrieve all news
+**Authentication:** Not required
+
+#### Response:
+
+```json
+{
+  "success": true,
+  "allNews": [ ... ]
+}
+```
+
+---
+
+### 3. Get Single News
+
+**Endpoint:** `GET /api/news/:id`
+**Description:** Retrieve a specific news item
+**Authentication:** Not required
+
+#### Response:
+
+```json
+{
+  "success": true,
+  "news": { ... }
+}
+```
+
+---
+
+### 4. Update News
+
+**Endpoint:** `PUT /api/news/update/:id`
+**Description:** Update a news item (Admin only)
+**Authentication:** Required
+**Content-Type:** `multipart/form-data`
+
+#### Request Body (any of the below):
+
+| Field     | Type   | Description          |
+| --------- | ------ | -------------------- |
+| headline  | String | Updated headline     |
+| content   | String | Updated content      |
+| newsImage | File   | New image (optional) |
+
+#### Response:
+
+```json
+{
+  "success": true,
+  "message": "News updated successfully",
+  "news": { ... }
+}
+```
+
+---
+
+### 5. Delete News
+
+**Endpoint:** `DELETE /api/news/delete/:id`
+**Description:** Delete a specific news item (Admin only)
+**Authentication:** Required
+
+#### Response:
+
+```json
+{
+  "success": true,
+  "message": "News deleted successfully",
+  "deletedNews": { ... }
+}
+```
+
 
 

@@ -134,5 +134,53 @@
 # < ./images/2.png
 # --boundary123--
 
-delete  http://localhost:3000/api/v1/event/delete/6815dd20926bd200b493e41f 
-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8 
+# delete  http://localhost:3000/api/v1/event/delete/6815dd20926bd200b493e41f 
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8 
+
+
+# POST   http://localhost:3000/api/v1/news/create 
+# Content-Type: multipart/form-data; boundary=boundary123
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8 
+
+# --boundary123
+# Content-Disposition: form-data; name="headline"
+
+# Important headline 2
+# --boundary123
+# Content-Disposition: form-data; name="content"
+
+# This is the description of the news.
+# --boundary123
+# Content-Disposition: form-data; name="image"; filename="news.png"
+# Content-Type: image/png
+
+# < ./images/1.png
+# --boundary123--
+
+# get  http://localhost:3000/api/v1/news/getAllNews 
+
+# get  http://localhost:3000/api/v1/news/get/6815eadd68156ca3440ed15b 
+
+
+# POST   http://localhost:3000/api/v1/news/update/6815eadd68156ca3440ed15b
+# Content-Type: multipart/form-data; boundary=boundary123
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8 
+
+# --boundary123
+# Content-Disposition: form-data; name="headline"
+
+# Updated headline 2
+# --boundary123
+# Content-Disposition: form-data; name="content"
+
+# This is the updated description of the news.
+# --boundary123
+# Content-Disposition: form-data; name="image"; filename="news.png"
+# Content-Type: image/png
+
+# < ./images/1.png
+# --boundary123--
+
+Delete   http://localhost:3000/api/v1/news/delete/6815eadd68156ca3440ed15b
+Content-Type: multipart/form-data; boundary=boundary123
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2NDk5NTQzLCJleHAiOjE3NDY1ODU5NDN9.Yycxi3rngTR9JcLC02J3G1AcawBUqzFvZiEZN0PAslY 
