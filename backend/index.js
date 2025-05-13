@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: ["http://localhost:3000", "https://college-website-six-tan.vercel.app/"],
   credential: true
 }
 app.use(cors(corsOptions));
@@ -35,5 +35,5 @@ app.use('/api/v1/announcement', announcementRoute)
 
 app.listen(port, () => {
   connectDB();
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Server listening on port ${port}`)
 })
