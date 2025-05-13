@@ -45,15 +45,15 @@
 # DELETE  http://localhost:3000/api/v1/admin/delete/67fb7c63f1e53050b5ab5ec7 
 # Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjdjNjNmMWU1MzA1MGI1YWI1ZWM3IiwiaWF0IjoxNzQ0NjQxODc5LCJleHAiOjE3NDQ3MjgyNzl9.A_Dg9QTM615lcjBEX_Ti_FeL_hLBk06hG8inP4DDVNA
 
-# post http://localhost:3000/api/v1/notice/create
-# Content-Type: application/json
-# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8
+post http://localhost:3000/api/v1/notice/create
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ3MTQ1MTM0LCJleHAiOjE3NDcyMzE1MzR9.sVYTykeg1e02wjsVoAlp-__6ebTfw67L-MYkPJVfV5Q
 
-# {
-#     "title": "test",
-#     "description": "test notice",
-#     "category": "General"
-# }
+{
+    "title": "test",
+    "description": "test notice",
+    "category": "General"
+}
 
 # get http://localhost:3000/api/v1/notice/getAllNotices
 # Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ2MTk3NTkxLCJleHAiOjE3NDYyODM5OTF9.MRsc9ktHYbefDq7COiNP3MtfyzempXkiTbBgjuMF2F8
@@ -209,5 +209,5 @@
 #   "content": "🎓 Welcome to XYZ College!"
 # }
 
-get http://localhost:3000/api/v1/announcement/get/homepage-banner-updated-updated
-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ3MTQ1MTM0LCJleHAiOjE3NDcyMzE1MzR9.sVYTykeg1e02wjsVoAlp-__6ebTfw67L-MYkPJVfV5Q
+# get http://localhost:3000/api/v1/announcement/get/homepage-banner-updated-updated
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ3MTQ1MTM0LCJleHAiOjE3NDcyMzE1MzR9.sVYTykeg1e02wjsVoAlp-__6ebTfw67L-MYkPJVfV5Q

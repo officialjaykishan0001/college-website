@@ -137,6 +137,10 @@ exports.getFacultyAdmins = async (req, res) => {
         })
     } catch (err) {
         console.log(err);
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 }
 
@@ -170,6 +174,10 @@ exports.updateProfile = async (req, res) => {
         })
     } catch (err) {
         console.log(err);
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 }
 
@@ -191,5 +199,9 @@ exports.deleteAdmin = async (req, res) => {
         })
     } catch (err) {
         console.log(err)
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 }

@@ -4,7 +4,7 @@ exports.createNotice = async (req, res) => {
     try {
         const { title, description, category } = req.body;
 
-        if(!title || !description || !category){
+        if (!title || !description || !category) {
             return res.status(400).json({
                 success: false,
                 message: "Something is missing"
@@ -24,14 +24,18 @@ exports.createNotice = async (req, res) => {
         })
     } catch (err) {
         console.log(err);
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 }
 
 exports.getAllNotice = async (req, res) => {
-    try{
+    try {
         const allNotices = await Notice.find();
 
-        if(!allNotices){
+        if (!allNotices) {
             return res.status(400).json({
                 success: false,
                 message: "No Notice found"
@@ -42,16 +46,20 @@ exports.getAllNotice = async (req, res) => {
             success: true,
             allNotices
         })
-    }catch(err){
+    } catch (err) {
         console.log(err)
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 }
 
-exports.getSingleNotice = async  (req, res) => {
-    try{
+exports.getSingleNotice = async (req, res) => {
+    try {
         const notice = await Notice.findById(req.params.id);
 
-        if(!notice) {
+        if (!notice) {
             return res.status(400).json({
                 success: false,
                 message: 'No notice found'
@@ -62,27 +70,31 @@ exports.getSingleNotice = async  (req, res) => {
             success: true,
             notice
         })
-    }catch(err){
+    } catch (err) {
         console.log(err)
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 }
 
 exports.updateNotice = async (req, res) => {
-    try{
-        const {title, description, category}  = req.body;
+    try {
+        const { title, description, category } = req.body;
 
         let notice = await Notice.findById(req.params.id);
 
-        if(!notice){
+        if (!notice) {
             return res.status(400).json({
-                success:false,
+                success: false,
                 message: "No notice found"
             })
         }
 
-        if(title) notice.title = title
-        if(description) notice.description = description
-        if(category) notice.category = category
+        if (title) notice.title = title
+        if (description) notice.description = description
+        if (category) notice.category = category
 
         await notice.save()
 
@@ -97,18 +109,22 @@ exports.updateNotice = async (req, res) => {
             message: "Notice updated successfully",
             notice
         })
-    }catch(err){
+    } catch (err) {
         console.log(err)
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 }
 
 exports.deleteNotice = async (req, res) => {
-    try{
+    try {
         const deletedNotice = await Notice.findByIdAndDelete(req.params.id);
 
-        if(!deletedNotice) {
+        if (!deletedNotice) {
             return res.status(400).json({
-                success:false,
+                success: false,
                 message: "No notice found"
             })
         }
@@ -118,7 +134,11 @@ exports.deleteNotice = async (req, res) => {
             message: 'Notice deleted successfully',
             deletedNotice
         })
-    }catch(err){
+    } catch (err) {
         console.log(err)
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 }

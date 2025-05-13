@@ -32,6 +32,10 @@ exports.createNews = async (req, res) => {
         })
     } catch (err) {
         console.log(err)
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 }
 
@@ -52,6 +56,10 @@ exports.getAllNews = async (req, res) => {
         })
     } catch (err) {
         console.log(err)
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 }
 
@@ -74,6 +82,10 @@ exports.getSingleNews = async (req, res) => {
         })
     } catch (err) {
         console.log(err);
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 
 }
@@ -111,6 +123,10 @@ exports.updateNews = async (req, res) => {
         })
     } catch (err) {
         console.log(err)
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 
 }
@@ -135,5 +151,9 @@ exports.deleteNews = async (req, res) => {
         })
     } catch (err) {
         console.log(err)
+        return res.status(500).json({
+            success: false,
+            message: "Internal server error"
+        })
     }
 }
