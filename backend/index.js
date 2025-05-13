@@ -11,6 +11,7 @@ const noticeRoute = require('./routes/notice.route')
 const eventRoute = require('./routes/event.route')
 const newsRoute = require('./routes/news.route')
 const galleryRoute = require('./routes/gallery.route')
+const announcementRoute = require('./routes/announcement.route')
 
 const app = express()
 const port = 3000
@@ -30,6 +31,7 @@ app.use('/api/v1/notice', noticeRoute)
 app.use('/api/v1/event', eventRoute)
 app.use('/api/v1/news', newsRoute)
 app.use('/api/v1/gallery', galleryRoute)
+app.use('/api/v1/announcement', announcementRoute)
 
 app.listen(port, () => {
   connectDB();

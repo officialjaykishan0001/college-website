@@ -440,5 +440,127 @@ Deletes a notice by ID.
 }
 ```
 
+## 📁 Gallery API
+
+### Base Route: `/api/gallery`
+
+---
+
+### 🔸 Upload Image
+
+**Endpoint:** `POST /upload`
+**Middleware:** `isAuthenticated`, `multer.single('image')`
+**Description:** Upload an image with a caption to the gallery.
+
+#### Request
+
+* **Headers:** `Authorization: Bearer <token>`
+* **Body (form-data):**
+
+  * `image`: File (image)
+  * `caption`: String
+
+#### Response
+
+```json
+{
+  "success": true,
+  "message": "Image uploaded",
+  "newImage": {
+    "_id": "id",
+    "imageUrl": "path/to/image",
+    "caption": "Your caption",
+    "updatedAt": "2025-05-13T12:00:00.000Z",
+    "__v": 0
+  }
+}
+```
+
+---
+
+### 🔸 Get Gallery Images
+
+**Endpoint:** `GET /get`
+**Description:** Retrieve all uploaded gallery images in descending order of upload time.
+
+#### Response
+
+```json
+{
+  "success": true,
+  "images": [
+    {
+      "_id": "id",
+      "imageUrl": "path/to/image",
+      "caption": "A caption",
+      "updatedAt": "2025-05-13T12:00:00.000Z",
+      "__v": 0
+    }
+  ]
+}
+```
+
+---
+
+## 📢 Announcement API
+
+### Base Route: `/api/announcement`
+
+---
+
+### 🔸 Create or Update Announcement
+
+**Endpoint:** `POST /create`
+**Middleware:** `isAuthenticated`
+**Description:** Create a new or update an existing announcement using a unique key.
+
+#### Request
+
+* **Headers:** `Authorization: Bearer <token>`
+* **Body (JSON):**
+
+  * `key`: String (e.g., `"library"`)
+  * `content`: String (announcement content)
+
+#### Response
+
+```json
+{
+  "message": "Announcement updated",
+  "data": {
+    "_id": "id",
+    "key": "library",
+    "content": "New books have arrived.",
+    "updatedAt": "2025-05-13T12:00:00.000Z",
+    "__v": 0
+  }
+}
+```
+
+---
+
+### 🔸 Get Announcement by Key
+
+**Endpoint:** `GET /get/:key`
+**Description:** Fetch the content of an announcement by its unique key.
+
+#### Example Request
+
+`GET /get/library`
+
+#### Response
+
+```json
+{
+  "success": true,
+  "announcement": {
+    "_id": "id",
+    "key": "library",
+    "content": "New books have arrived.",
+    "updatedAt": "2025-05-13T12:00:00.000Z",
+    "__v": 0
+  }
+}
+```
 
 

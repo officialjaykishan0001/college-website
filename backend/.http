@@ -200,4 +200,14 @@
 # < ./images/2.png
 # --boundary123--
 
-GET http://localhost:3000/api/v1/gallery/get
+# POST http://localhost:3000/api/v1/announcement/create
+# Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ3MTQ1MTM0LCJleHAiOjE3NDcyMzE1MzR9.sVYTykeg1e02wjsVoAlp-__6ebTfw67L-MYkPJVfV5Q
+# Content-Type: application/json
+
+# {
+#   "key": "homepage-banner",
+#   "content": "🎓 Welcome to XYZ College!"
+# }
+
+get http://localhost:3000/api/v1/announcement/get/homepage-banner-updated-updated
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjdmYjY5ZjM0NDIxZGI4NjMyYjI0NWYxIiwiaWF0IjoxNzQ3MTQ1MTM0LCJleHAiOjE3NDcyMzE1MzR9.sVYTykeg1e02wjsVoAlp-__6ebTfw67L-MYkPJVfV5Q
