@@ -14,6 +14,11 @@ import Login from "./pages/Login";
 import AdminLayout from "./components/admin/AdminLayout";
 import Dashboard from './pages/admin/Dashboard'
 import AdminFaculties from './pages/admin/AdminFaculties'
+import AdminEvents from './pages/admin/AdminEvents'
+import AdminNotices from "./pages/admin/AdminNotices";
+import AdminNews from "./pages/admin/AdminNews";
+import AdminGallery from "./pages/admin/AdminGallery";
+import AdminContact from "./pages/admin/AdminContact";
 
 // Define Routes with Layout
 const appRouter = createBrowserRouter([
@@ -36,10 +41,15 @@ const appRouter = createBrowserRouter([
   // Admin route started
   {
     path: "/admin",
-    element: <AdminLayout/>,
+    element: <AdminLayout />,
     children: [
-      { path: "dashboard", element: <Dashboard/>},
-      { path: "faculties", element: <AdminFaculties />}
+      { path: "dashboard", element: <Dashboard /> },
+      { path: "faculties", element: <AdminFaculties /> },
+      { path: "events", element: <AdminEvents /> },
+      { path: "notices", element: <AdminNotices /> },
+      { path: "news", element: <AdminNews /> },
+      { path: "gallery", element: <AdminGallery/>},
+      { path: "contact-requests", element: <AdminContact/>}
     ]
   }
 ]);

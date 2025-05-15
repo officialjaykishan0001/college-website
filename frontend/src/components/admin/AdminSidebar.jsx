@@ -1,5 +1,5 @@
 import React from 'react'
-import { LogOut, ChevronLeft, LayoutDashboard, UsersRound, CalendarDays, UserPlus, Images, Book, Mail } from 'lucide-react'
+import { LogOut, ChevronLeft, LayoutDashboard, UsersRound, CalendarDays, UserPlus, Images, Book, Mail, Bell, Newspaper } from 'lucide-react'
 
 const AdminSidebar = () => {
   return (
@@ -34,9 +34,15 @@ const AdminSidebar = () => {
                 </a>
               </li>
               <li>
-                <a href="/admin/admissions" className='flex items-center p-3 rounded-lg hover:bg-blue-50 group transition-colors '>
-                  <UserPlus />
-                  <span className='ml-3 text-sm font-medium text-gray-600  group-hover:text-blue-600'>Admissions</span>
+                <a href="/admin/notices" className='flex items-center p-3 rounded-lg hover:bg-blue-50 group transition-colors '>
+                <Bell />
+                  <span className='ml-3 text-sm font-medium text-gray-600  group-hover:text-blue-600'>Notice</span>
+                </a>
+              </li>
+              <li>
+                <a href="/admin/news" className='flex items-center p-3 rounded-lg hover:bg-blue-50 group transition-colors'>
+                <Newspaper />
+                  <span className='ml-3 text-sm font-medium text-gray-600  group-hover:text-blue-600'>News</span>
                 </a>
               </li>
               <li>
@@ -46,13 +52,7 @@ const AdminSidebar = () => {
                 </a>
               </li>
               <li>
-                <a href="/admin/library" className='flex items-center p-3 rounded-lg hover:bg-blue-50 group transition-colors'>
-                  <Book />
-                  <span className='ml-3 text-sm font-medium text-gray-600  group-hover:text-blue-600'>Library</span>
-                </a>
-              </li>
-              <li>
-                <a href="/contact-requests" className='flex items-center p-3 rounded-lg hover:bg-blue-50 group transition-colors '>
+                <a href="/admin/contact-requests" className='flex items-center p-3 rounded-lg hover:bg-blue-50 group transition-colors '>
                   <Mail />
                   <span className='ml-3 text-sm font-medium text-gray-600  group-hover:text-blue-600'>Contact Requests</span>
                 </a>
