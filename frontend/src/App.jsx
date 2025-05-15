@@ -11,6 +11,9 @@ import Sports from "./pages/Sports";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import AdminLayout from "./components/admin/AdminLayout";
+import Dashboard from './pages/admin/Dashboard'
+import AdminFaculties from './pages/admin/AdminFaculties'
 
 // Define Routes with Layout
 const appRouter = createBrowserRouter([
@@ -30,6 +33,15 @@ const appRouter = createBrowserRouter([
       { path: "/login", element: <Login /> }
     ],
   },
+  // Admin route started
+  {
+    path: "/admin",
+    element: <AdminLayout/>,
+    children: [
+      { path: "dashboard", element: <Dashboard/>},
+      { path: "faculties", element: <AdminFaculties />}
+    ]
+  }
 ]);
 
 function App() {
