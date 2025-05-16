@@ -10,6 +10,7 @@ import store from './redux/store';
 import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
+import { Toaster } from "react-hot-toast";
 const persister = persistStore(store);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +22,7 @@ root.render(
           <App />
         </PersistGate>
       </Provider>
+      <Toaster />
     </Theme>
   </React.StrictMode>
 );

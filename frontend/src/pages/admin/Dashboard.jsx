@@ -1,8 +1,11 @@
 import React from 'react'
 import { Plus, Ellipsis, UsersRound, MoveUpRight, CalendarDays, MailOpen, Pencil, Trash2 } from 'lucide-react'
 import { TextField, Button, Table, Popover, Separator } from '@radix-ui/themes'
+import { useSelector } from 'react-redux'
 
 const Dashboard = () => {
+  const {loading, admin} = useSelector(store => store.auth)
+  console.log(admin, loading)
   return (
     <div className='space-y-6'>
       <div>
