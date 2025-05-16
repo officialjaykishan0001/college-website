@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ShowGalleryImg from '../components/ShowGalleryImg';
 
 const Gallery = () => {
+  
     const images = [
         "http://www.sgrpgcollege.in/images/principal.jpg",
         "http://www.sgrpgcollege.in/images/CollegeFront.jpg",

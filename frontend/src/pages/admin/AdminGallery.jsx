@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 import { Button } from '@radix-ui/themes';
 import { CirclePlus, Download, Eye, Trash2 } from 'lucide-react';
+import { useSelector } from 'react-redux';
+import useGetAllImages from '../../hooks/useGetAllImages';
+
+
 
 const AdminGallery = () => {
+  useGetAllImages();
+
+  const { allImages } = useSelector(store => store.gallery)
+
+  console.log(allImages)
+
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
@@ -70,7 +80,7 @@ const AdminGallery = () => {
             <img
               src={selectedImage.src}
               alt="Full view"
-              className="w-full h-auto object-cover"
+              className="w-full h-[80vh] object-cover"
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">{selectedImage.title}</h2>
