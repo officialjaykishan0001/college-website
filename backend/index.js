@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://college-website-six-tan.vercel.app/"],
+  origin: ["http://localhost:3000", "https://college-website-six-tan.vercel.app/", "https://organic-giggle-v9xwrqq6rjw2xw79-3000.app.github.dev"],
   credentials: true
 }
 app.use(cors(corsOptions));
