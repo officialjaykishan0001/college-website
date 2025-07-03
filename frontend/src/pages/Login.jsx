@@ -45,11 +45,7 @@ const Login = () => {
       dispatch(setLoading(false));
     }
   }
-  useEffect(() => {
-    if (admin) {
-      navigate('/admin/dashboard')
-    }
-  })
+
   return (
     <div>
       <div className='flex items-center justify-center max-w-7xl mx-auto'>
